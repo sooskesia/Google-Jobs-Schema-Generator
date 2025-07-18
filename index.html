@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Google Jobs Schema Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Google Jobs Schema Generator</h2>
+    <p>Fill in job details to instantly generate structured JSON-LD markup for job postings.</p>
+
+    <form id="schemaForm">
+      <label>Job Title:</label>
+      <input type="text" id="jobTitle" required>
+
+      <label>Job Description:</label>
+      <textarea id="jobDescription" required></textarea>
+
+      <label>Company Name:</label>
+      <input type="text" id="companyName" required>
+
+      <label>Company URL:</label>
+      <input type="url" id="companyUrl" required>
+
+      <label>Industry:</label>
+      <input type="text" id="industry" required>
+
+      <label>Employment Type:</label>
+      <select id="employmentType" required>
+        <option value="">Select</option>
+        <option value="Full-Time">Full-Time</option>
+        <option value="Part-Time">Part-Time</option>
+        <option value="Contract">Contract</option>
+        <option value="Internship">Internship</option>
+        <option value="Freelance">Freelance</option>
+      </select>
+
+      <label>Work Hours:</label>
+      <input type="text" id="workHours" required>
+
+      <label>Date Posted:</label>
+      <input type="date" id="datePosted" required>
+
+      <label>Valid Through:</label>
+      <input type="date" id="validThrough" required>
+
+      <label>Base Salary (USD):</label>
+      <input type="text" id="salary">
+
+      <label>Remote Job:</label>
+      <input type="checkbox" id="remoteJob">
+
+      <div id="locationSection">
+        <label>Street Address:</label>
+        <input type="text" id="street">
+
+        <label>City:</label>
+        <input type="text" id="city">
+
+        <label>Postal Code:</label>
+        <input type="text" id="postalCode">
+
+        <label>Country Code:</label>
+        <input type="text" id="country" required>
+      </div>
+
+      <button type="submit">Generate Schema</button>
+      <button type="button" id="copyBtn">Copy</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <h3>Generated Schema:</h3>
+    <pre id="output"></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
