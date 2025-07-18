@@ -1,5 +1,5 @@
 # Google Jobs Schema Generator
-
+  
 Generate structured Google JobPosting JSON-LD markup for SEO-rich job listings.
 
 ## Features
